@@ -28,7 +28,7 @@
       Notes
     </label>
 
-    <textarea id="notes" name="notes" class="form-control" rows="3"><%= @individual_expense_ledger.notes %></textarea>
+    <input type="text" id="notes" name="notes" class="form-control" value="<%= @individual_expense_ledger.notes %>">
   </div>
 
   <button class="btn btn-block btn-outline-secondary">
