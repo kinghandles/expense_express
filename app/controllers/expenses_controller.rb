@@ -1,6 +1,9 @@
 class ExpensesController < ApplicationController
   def index
-    @expenses = Expense.all
+
+    @q = Expense.ransack(params[:q])
+    @expenses = @q.result(:distinct => true).includes(:individual_expense_ledgers, :group, :category, :users).page(params[:page]).per(10)
+
 
     render("expense_templates/index.html.erb")
   end

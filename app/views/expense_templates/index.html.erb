@@ -49,6 +49,10 @@
         </th>
 
         <th>
+          Description
+        </th>
+
+        <th>
         </th>
       </tr>
 
@@ -84,6 +88,10 @@
 
         <td>
           <%= time_ago_in_words(expense.updated_at) %> ago
+        </td>
+
+        <td>
+          <%= expense.description %>
         </td>
 
         <td>
