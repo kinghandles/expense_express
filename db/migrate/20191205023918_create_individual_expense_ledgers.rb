@@ -3,7 +3,7 @@ class CreateIndividualExpenseLedgers < ActiveRecord::Migration[5.1]
     create_table :individual_expense_ledgers do |t|
       t.integer :expense_id
       t.integer :user_id
-      t.text :notes
+      t.string :notes
 
       t.timestamps
     end
